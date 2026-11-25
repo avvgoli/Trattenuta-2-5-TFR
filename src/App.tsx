@@ -44,7 +44,7 @@ export default function App() {
               className="inline-flex items-center gap-2.5 font-serif font-bold text-navy-900 text-base sm:text-lg tracking-tight whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy-900"
             >
               <img
-                src="/assets/aistudio/logo_piccolo_fc815523.png"
+                src="./assets/aistudio/logo_piccolo_fc815523.png"
                 alt="Logo Studio Legale Golinelli"
                 className="h-8 w-8 object-contain shrink-0"
               />
