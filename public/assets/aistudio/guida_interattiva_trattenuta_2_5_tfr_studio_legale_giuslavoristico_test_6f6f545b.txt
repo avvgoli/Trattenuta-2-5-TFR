@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trattenuta del 2,5% in busta paga per supplenti e personale a termine | Approfondimento Legale</title>
+    <meta name="description" content="Trattenuta del 2,5% sul TFR per supplenti e personale a termine: quando spetta il rimborso, come interrompere la prescrizione e simulatore indicativo.">
+    
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configurazione Tailwind Custom -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#081829',
+                            900: '#0f2942',
+                            800: '#163a5c',
+                            700: '#1f4e78',
+                            50:  '#f0f4f8'
+                        },
+                        gold: {
+                            600: '#9a732d',
+                            500: '#b48a3e',
+                            400: '#cca356',
+                            100: '#f8f2e4',
+                            50:  '#fcf9f2'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Stili personalizzati per slider, barra di avanzamento e dettagli editoriali */
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, .font-serif-editorial {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        /* Custom Range Slider */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 999px;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #0f2942;
+            border: 3px solid #b48a3e;
+            cursor: pointer;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+            box-shadow: 0 2px 6px rgba(15, 41, 66, 0.25);
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+            background: #163a5c;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #0f2942;
+            border: 3px solid #b48a3e;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(15, 41, 66, 0.25);
+        }
+
+        /* Animazione fluida per dettagli FAQ */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .chevron-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="selection:bg-gold-100 selection:text-navy-900">
+
+    <!-- Barra di avanzamento lettura -->
+    <div class="fixed top-0 left-0 w-full h-1.5 bg-slate-200 z-50">
+        <div id="reading-progress" class="h-full bg-gold-500 transition-all duration-150 ease-out" style="width: 0%;"></div>
+    </div>
+
+    <!-- Header Istituzionale -->
+    <header class="sticky top-1.5 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Brand / Intestazione Studio -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-navy-900 flex items-center justify-center text-gold-400 shadow-sm shrink-0">
+                        <!-- Icona Bilancia Stilizzata SVG -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m-7-4h14M5 7l-3 6h6l-3-6zm14 0l-3 6h6l-3-6zM5 7h14"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="block font-serif font-bold text-navy-900 text-base sm:text-lg leading-tight tracking-tight">
+                            Studio Legale Giuslavoristico
+                        </span>
+                        <span class="block text-xs text-slate-500 font-medium tracking-wide uppercase">
+                            Approfondimenti &amp; Tutela dei Diritti
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Navigazione Rapida Desktop -->
+                <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600" aria-label="Navigazione sezioni">
+                    <a href="#il-fatto" class="hover:text-navy-900 transition-colors">Il Caso</a>
+                    <a href="#principio-diritto" class="hover:text-navy-900 transition-colors">Principio di Diritto</a>
+                    <a href="#strumenti-verifica" class="hover:text-navy-900 transition-colors">Strumenti di Verifica</a>
+                    <a href="#faq" class="hover:text-navy-900 transition-colors">FAQ</a>
+                    <a href="#consulenza" class="px-4 py-2 rounded-lg bg-navy-900 text-white hover:bg-navy-800 transition-colors shadow-sm">
+                        Valutazione Preliminare
+                    </a>
+                </nav>
+
+                <!-- Pulsante Mobile CTA -->
+                <div class="md:hidden">
+                    <a href="#strumenti-verifica" class="px-3 py-2 rounded-lg bg-navy-900 text-white text-xs font-semibold">
+                        Verifica Ora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section / Intestazione Articolo -->
+    <section class="bg-navy-900 text-white relative overflow-hidden">
+        <!-- Elemento decorativo geometrico discreto -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                <defs>
+                    <pattern id="legal-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.75"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#legal-grid)" />
+            </svg>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-800 border border-navy-700 text-gold-400 text-xs font-semibold uppercase tracking-wider mb-6">
+                <span>Pubblico Impiego &amp; Diritto Scolastico</span>
+                <span aria-hidden="true">•</span>
+                <span>Guida Interattiva</span>
+            </div>
+
+            <h1 class="font-serif text-3xl sm:text-4xl lg:text-[2.65rem] font-bold leading-tight text-white mb-6">
+                Trattenuta del 2,5% in busta paga per supplenti e personale a termine: quando spetta il rimborso e come interrompere la prescrizione
+            </h1>
+
+            <p class="text-slate-200 text-base sm:text-lg leading-relaxed font-normal max-w-3xl mb-8">
+                Chi ha lavorato con contratti a tempo determinato nella scuola o nei servizi educativi degli enti locali riscontra spesso nei propri cedolini una decurtazione del <strong class="text-white font-semibold">2,50% calcolata sull’80% della retribuzione lorda</strong> (pari a circa il 2% del lordo mensile), applicata a titolo di adeguamento al regime del Trattamento di Fine Rapporto (TFR).
+            </p>
+
+            <!-- Box Sintesi Destinatari -->
+            <div class="bg-navy-800/80 border-l-4 border-gold-500 rounded-r-xl p-5 sm:p-6 backdrop-blur-sm">
+                <p class="text-sm sm:text-base text-slate-100 leading-relaxed">
+                    <strong class="text-gold-400 font-semibold">A chi si rivolge questo approfondimento:</strong> questo prelievo riguarda direttamente docenti supplenti, personale amministrativo, tecnico e ausiliario (ATA), educatori e insegnanti di religione con incarichi a termine — <em>inclusi coloro che oggi sono stati immessi in ruolo o che non prestano più servizio</em> — e incide in modo concreto sulle somme effettivamente percepite durante gli anni di precariato.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenuto Principale -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 space-y-14">
+
+        <!-- Sezione 1: Il fatto -->
+        <article id="il-fatto" class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-sm">
+            <div class="flex items-center gap-2 text-gold-600 text-xs font-bold uppercase tracking-widest mb-2">
+                <span>01. Origine del contenzioso</span>
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy-900 mb-5">
+                Il fatto: la richiesta di restituzione dei lavoratori a termine
+            </h2>
+
+            <div class="space-y-4 text-slate-700 leading-relaxed text-base sm:text-[1.05rem]">
+                <p>
+                    La vicenda nasce dall’iniziativa di alcuni lavoratori assunti con contratti a tempo determinato nel settore scolastico ed educativo (insegnanti, educatori e personale di sostegno), i quali avevano rilevato nei propri prospetti paga la riduzione mensile legata al regime TFR.
+                </p>
+                <p>
+                    A fronte del diniego opposto dall’amministrazione datrice di lavoro, i lavoratori hanno agito in giudizio chiedendo la cessazione della trattenuta e la restituzione delle somme indebitamente decurtate. Sia in primo grado (<strong>Tribunale di Roma, sentenza n. 7642/2025</strong>) sia in appello (<strong>Corte d’Appello di Roma, Sezione Lavoro, sentenza n. 4033/2026</strong>), i giudici hanno accolto le domande dei lavoratori a termine, allineandosi all’orientamento già espresso dalla <strong>Corte di Cassazione, Sezione Lavoro</strong> (<strong>ordinanze n. 11663/2023 e n. 19697/2023</strong>).
+                </p>
+            </div>
+
+            <!-- Pillole Giurisprudenziali -->
+            <div class="mt-7 pt-6 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-slate-50 rounded-xl p-4 border border-slate-200/70">
+                    <span class="block text-xs font-semibold text-gold-600 uppercase">Legittimità</span>
+                    <span class="block font-bold text-navy-900 text-sm mt-1">Cass. Civ., Sez. Lav.</span>
+                    <span class="block text-xs text-slate-600 mt-0.5">Ord. n. 11663/2023 e n. 19697/2023</span>
+                </div>
+                <div class="bg-slate-50 rounded-xl p-4 border border-slate-200/70">
+                    <span class="block text-xs font-semibold text-gold-600 uppercase">Merito (I Grado)</span>
+                    <span class="block font-bold text-navy-900 text-sm mt-1">Tribunale di Roma</span>
+                    <span class="block text-xs text-slate-600 mt-0.5">Sentenza n. 7642/2025</span>
+                </div>
+                <div class="bg-slate-50 rounded-xl p-4 border border-slate-200/70">
+                    <span class="block text-xs font-semibold text-gold-600 uppercase">Merito (Appello)</span>
+                    <span class="block font-bold text-navy-900 text-sm mt-1">Corte d’Appello di Roma</span>
+                    <span class="block text-xs text-slate-600 mt-0.5">Sez. Lav., Sentenza n. 4033/2026</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Sezione 2: Il principio di diritto -->
+        <article id="principio-diritto" class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-sm">
+            <div class="flex items-center gap-2 text-gold-600 text-xs font-bold uppercase tracking-widest mb-2">
+                <span>02. Quadro normativo e giurisprudenziale</span>
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy-900 mb-5">
+                Il principio di diritto: perché la trattenuta non si applica ai contratti a termine
+            </h2>
+
+            <p class="text-slate-700 leading-relaxed text-base sm:text-[1.05rem] mb-6">
+                Con il passaggio del pubblico impiego dall’indennità di buonuscita (TFS) al TFR, l’Accordo quadro del 29 luglio 1999 e il DPCM 20 dicembre 1999 (art. 1, comma 3) hanno introdotto una riduzione della retribuzione lorda pari al 2,50% sull’80% dell’imponibile, compensata da un incremento figurativo ai fini previdenziali e della liquidazione. La giurisprudenza ha chiarito che tale meccanismo non opera in modo uniforme, ma distingue nettamente tra personale stabile e personale precario:
+            </p>
+
+            <!-- Card Comparative -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+                <!-- Card 1 -->
+                <div class="rounded-xl border-2 border-navy-900 bg-navy-50/60 p-5 flex flex-col justify-between">
+                    <div>
+                        <span class="inline-block px-2.5 py-1 rounded-md bg-navy-900 text-white text-xs font-semibold mb-3">
+                            Contratti a Termine
+                        </span>
+                        <h3 class="font-serif text-lg font-bold text-navy-900 mb-2">
+                            Disciplina speciale del TFR privato
+                        </h3>
+                        <p class="text-sm text-slate-700 leading-relaxed">
+                            L’art. 7 dell’Accordo quadro del 1999 e l’art. 1, comma 9, del DPCM 20 dicembre 1999 prevedono che ai rapporti a tempo determinato si applichino le regole del TFR proprie del settore privato, <strong>senza alcun richiamo alla riduzione del 2,50%</strong>.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-navy-900/10 text-xs font-semibold text-emerald-700 flex items-center gap-1.5">
+                        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        <span>Trattenuta non dovuta</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 flex flex-col justify-between">
+                    <div>
+                        <span class="inline-block px-2.5 py-1 rounded-md bg-slate-200 text-slate-800 text-xs font-semibold mb-3">
+                            Personale di Ruolo
+                        </span>
+                        <h3 class="font-serif text-lg font-bold text-navy-900 mb-2">
+                            Inapplicabilità dell’invarianza retributiva
+                        </h3>
+                        <p class="text-sm text-slate-700 leading-relaxed">
+                            La riduzione serve a mantenere invariato lo stipendio netto tra dipendenti di ruolo in TFS e colleghi di ruolo passati al TFR (art. 26, c. 19, L. 448/1998; Corte Cost. n. 213/2018; Cass. ord. n. 19108/2023 e n. 19438/2023), ragion per cui è legittima <strong>solo per il personale a tempo indeterminato</strong>.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200 text-xs font-semibold text-slate-600 flex items-center gap-1.5">
+                        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span>Valida solo dopo l’immissione in ruolo</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="rounded-xl border border-gold-400/50 bg-gold-50 p-5 flex flex-col justify-between">
+                    <div>
+                        <span class="inline-block px-2.5 py-1 rounded-md bg-gold-500 text-white text-xs font-semibold mb-3">
+                            Diritto Europeo
+                        </span>
+                        <h3 class="font-serif text-lg font-bold text-navy-900 mb-2">
+                            Tutela non discriminatoria
+                        </h3>
+                        <p class="text-sm text-slate-700 leading-relaxed">
+                            Secondo la clausola 4 dell’accordo quadro allegato alla <strong>Direttiva 1999/70/CE</strong>, il divieto di discriminazione impedisce di trattare i lavoratori a termine in modo peggiore rispetto agli stabili, ma non vieta una disciplina più favorevole giustificata dalla precarietà.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gold-500/20 text-xs font-semibold text-gold-600 flex items-center gap-1.5">
+                        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        <span>Principio di non regressione</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-navy-900 text-white rounded-xl p-5 sm:p-6">
+                <p class="text-sm sm:text-base leading-relaxed">
+                    <strong class="text-gold-400">In sintesi:</strong> in forza di tali principi, la Corte di Cassazione (ordinanze n. 11663/2023 e n. 19697/2023) e la Corte d’Appello di Roma (sentenza n. 4033/2026) hanno affermato che <strong>la trattenuta del 2,50% sulle retribuzioni dei contratti a tempo determinato è illegittima e va restituita</strong>, a prescindere dalla data di prima assunzione del lavoratore.
+                </p>
+            </div>
+        </article>
+
+        <!-- Sezione 3: Strumenti Interattivi di Orientamento -->
+        <section id="strumenti-verifica" class="space-y-8 scroll-mt-24">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-gold-600 text-xs font-bold uppercase tracking-widest">03. Orientamento pratico per il lavoratore</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy-900 mt-1 mb-3">
+                    Strumenti interattivi per verificare la tua posizione
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Utilizza i quattro strumenti operativi predisposti dal nostro Studio per effettuare un primo controllo autonomo sui tuoi contratti, sui cedolini e sui termini di prescrizione.
+                </p>
+            </div>
+
+            <!-- TOOL 1: Test rapido di idoneità -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-6 pb-4 border-b border-slate-100">
+                    <div>
+                        <span class="text-xs font-bold text-gold-600 uppercase tracking-wider">Strumento 1 di 4</span>
+                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-900">
+                            Test rapido di idoneità (3 domande)
+                        </h3>
+                    </div>
+                    <button type="button" id="reset-quiz-btn" class="text-xs font-medium text-slate-500 hover:text-navy-900 underline">
+                        Azzera risposte
+                    </button>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Domanda 1 -->
+                    <div>
+                        <p class="font-semibold text-navy-900 text-sm sm:text-base mb-2.5">
+                            1. Quale tipologia di rapporto di lavoro hai svolto?
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" role="radiogroup" aria-label="Tipologia di contratto">
+                            <button type="button" data-q="1" data-val="termine" class="quiz-opt text-left p-3.5 rounded-xl border border-slate-200 hover:border-navy-900 transition-all text-sm font-medium text-slate-700">
+                                Contratti a tempo determinato / supplenze (anche se oggi sono di ruolo)
+                            </button>
+                            <button type="button" data-q="1" data-val="solo_ruolo" class="quiz-opt text-left p-3.5 rounded-xl border border-slate-200 hover:border-navy-900 transition-all text-sm font-medium text-slate-700">
+                                Esclusivamente servizio di ruolo a tempo indeterminato
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Domanda 2 -->
+                    <div>
+                        <p class="font-semibold text-navy-900 text-sm sm:text-base mb-2.5">
+                            2. Presso quale ente o settore hai prestato servizio?
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" role="radiogroup" aria-label="Ente o settore">
+                            <button type="button" data-q="2" data-val="scuola_enti" class="quiz-opt text-left p-3.5 rounded-xl border border-slate-200 hover:border-navy-900 transition-all text-sm font-medium text-slate-700">
+                                Scuola statale (docente, ATA, religione) o Enti Locali (nidi/scuole comunali)
+                            </button>
+                            <button type="button" data-q="2" data-val="altro" class="quiz-opt text-left p-3.5 rounded-xl border border-slate-200 hover:border-navy-900 transition-all text-sm font-medium text-slate-700">
+                                Settore privato o altro ente non soggetto al DPCM 20/12/1999
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Domanda 3 -->
+                    <div>
+                        <p class="font-semibold text-navy-900 text-sm sm:text-base mb-2.5">
+                            3. Quando hai svolto i periodi di servizio a tempo determinato?
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" role="radiogroup" aria-label="Periodo di servizio">
+                            <button type="button" data-q="3" data-val="ultimi_5" class="quiz-opt text-left p-3.5 rounded-xl border border-slate-200 hover:border-navy-900 transition-all text-sm font-medium text-slate-700">
+                                Almeno in parte negli ultimi 5 anni (o ho già inviato diffida interruttiva)
+                            </button>
+                            <button type="button" data-q="3" data-val="oltre_5" class="quiz-opt text-left p-3.5 rounded-xl border border-slate-200 hover:border-navy-900 transition-all text-sm font-medium text-slate-700">
+                                Esclusivamente oltre 5 anni fa, senza mai aver inviato diffide scritte
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box Esito Quiz -->
+                <div id="quiz-result" class="mt-6 p-5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-600">
+                    Seleziona una risposta per ciascuna delle tre domande per visualizzare un primo orientamento sulla tua posizione.
+                </div>
+            </div>
+
+            <!-- TOOL 2: Simulatore indicativo del rimborso -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+                <div class="mb-6 pb-4 border-b border-slate-100">
+                    <span class="text-xs font-bold text-gold-600 uppercase tracking-wider">Strumento 2 di 4</span>
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-900">
+                        Simulatore indicativo del rimborso (2% sul lordo mensile)
+                    </h3>
+                    <p class="text-sm text-slate-600 mt-1">
+                        La riduzione del 2,50% sull’80% dell’imponibile corrisponde esattamente al <strong>2% della retribuzione lorda</strong>. Regola i parametri per una stima orientativa.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Controlli Slider -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label for="gross-salary" class="text-sm font-semibold text-navy-900">
+                                    Retribuzione lorda mensile media (€)
+                                </label>
+                                <div class="flex items-center gap-1">
+                                    <input type="number" id="gross-salary-input" min="800" max="4500" step="50" value="1900"
+                                        class="w-24 px-2.5 py-1 text-right font-bold text-navy-900 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-navy-900">
+                                    <span class="text-sm font-semibold text-slate-600">€</span>
+                                </div>
+                            </div>
+                            <input type="range" id="gross-salary" min="800" max="4500" step="50" value="1900" aria-label="Retribuzione lorda mensile">
+                            <div class="flex justify-between text-xs text-slate-400 mt-1">
+                                <span>800 €</span>
+                                <span>1.900 € (esempio standard)</span>
+                                <span>4.500 €</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label for="service-months" class="text-sm font-semibold text-navy-900">
+                                    Mesi di servizio a termine non prescritti
+                                </label>
+                                <div class="flex items-center gap-1">
+                                    <input type="number" id="service-months-input" min="1" max="60" step="1" value="10"
+                                        class="w-20 px-2.5 py-1 text-right font-bold text-navy-900 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-navy-900">
+                                    <span class="text-sm font-semibold text-slate-600">mesi</span>
+                                </div>
+                            </div>
+                            <input type="range" id="service-months" min="1" max="60" step="1" value="10" aria-label="Mesi di servizio a termine">
+                            <div class="flex justify-between text-xs text-slate-400 mt-1">
+                                <span>1 mese</span>
+                                <span>10 mesi (1 anno scol.)</span>
+                                <span>50 mesi</span>
+                                <span>60 mesi (5 anni)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Risultati Simulazione -->
+                    <div class="lg:col-span-5 bg-navy-900 text-white rounded-xl p-6 space-y-4">
+                        <div class="border-b border-navy-700 pb-3">
+                            <span class="block text-xs uppercase tracking-wider text-slate-300">Trattenuta mensile stimata</span>
+                            <span id="monthly-deduction" class="block font-serif text-2xl sm:text-3xl font-bold text-gold-400 mt-0.5">
+                                € 38,00
+                            </span>
+                        </div>
+                        <div>
+                            <span class="block text-xs uppercase tracking-wider text-slate-300">Stima complessiva lorda recuperabile</span>
+                            <span id="total-recovery" class="block font-serif text-3xl sm:text-4xl font-bold text-white mt-0.5">
+                                € 380,00
+                            </span>
+                            <span id="recovery-note" class="block text-xs text-slate-300 mt-1">
+                                Calcolata su 10 mesi di servizio a termine
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-5 text-xs text-slate-500 bg-slate-50 p-3.5 rounded-lg border border-slate-200/80 leading-relaxed">
+                    <strong>Avvertenza tecnica:</strong> i valori visualizzati costituiscono una stima puramente indicativa e orientativa. L’importo effettivamente recuperabile dipende dalle singole voci retributive imponibili presenti nei cedolini mensili, dagli scatti o indennità accessorie e dalla decorrenza dei termini di prescrizione.
+                </p>
+            </div>
+
+            <!-- TOOL 3: Guida visiva interattiva al Cedolino -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+                <div class="mb-6 pb-4 border-b border-slate-100">
+                    <span class="text-xs font-bold text-gold-600 uppercase tracking-wider">Strumento 3 di 4</span>
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-900">
+                        Guida visiva al cedolino: quali voci cercare e quali escludere
+                    </h3>
+                    <p class="text-sm text-slate-600 mt-1">
+                        Seleziona le schede sottostanti per evidenziare nel fac-simile anonimizzato di busta paga le diciture rilevanti ai fini del rimborso.
+                    </p>
+                </div>
+
+                <!-- Tab di filtro -->
+                <div class="flex flex-wrap gap-2 mb-6" role="tablist" aria-label="Filtro voci cedolino">
+                    <button type="button" data-tab="rilevanti" class="payslip-tab px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-navy-900 text-white transition-colors">
+                        Voci da recuperare (Illegittime su contratti a termine)
+                    </button>
+                    <button type="button" data-tab="escluse" class="payslip-tab px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
+                        Voci da NON confondere (Escluse dal conteggio)
+                    </button>
+                </div>
+
+                <!-- Fac-simile Cedolino Anonimizzato -->
+                <div class="rounded-xl border-2 border-slate-300 bg-slate-50 overflow-hidden font-mono text-xs sm:text-sm">
+                    <!-- Intestazione Fac-simile -->
+                    <div class="bg-slate-200/80 px-4 py-3 border-b border-slate-300 flex flex-wrap justify-between items-center gap-2 text-slate-700">
+                        <div>
+                            <span class="font-bold">PROSPETTO RETRIBUTIVO (FAC-SIMILE ANONIMIZZATO)</span>
+                            <span class="block text-[11px] text-slate-500">Qualifica: Personale a Tempo Determinato — Regime: TFR</span>
+                        </div>
+                        <span class="px-2 py-0.5 bg-white border border-slate-300 rounded text-[11px] font-semibold">
+                            Esempio Illustrativo
+                        </span>
+                    </div>
+
+                    <!-- Tabella Voci -->
+                    <div class="divide-y divide-slate-200">
+                        <!-- Riga Competenze -->
+                        <div class="px-4 py-3 flex justify-between items-center bg-white text-slate-600">
+                            <span>001 - Stipendio Tabellare / Retribuzione Base</span>
+                            <span class="font-semibold text-slate-800">+ 1.900,00 €</span>
+                        </div>
+
+                        <!-- Riga Rilevante 1 -->
+                        <div id="row-tfr-1" class="px-4 py-3.5 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 bg-emerald-50/90 border-l-4 border-emerald-600 transition-all">
+                            <div>
+                                <span class="font-bold text-emerald-950 block">
+                                    840 - TFR art. 1 c. 3 DPCM 20/12/1999 – 2,500 su 80
+                                </span>
+                                <span class="text-[11px] text-emerald-800 font-sans">
+                                    Dicitura tipica nei cedolini del comparto scuola (NoiPA). Equivale al 2% del lordo.
+                                </span>
+                            </div>
+                            <span class="font-bold text-emerald-900 shrink-0">- 38,00 € (Rilevante)</span>
+                        </div>
+
+                        <!-- Riga Rilevante 2 -->
+                        <div id="row-tfr-2" class="px-4 py-3.5 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 bg-emerald-50/90 border-l-4 border-emerald-600 transition-all">
+                            <div>
+                                <span class="font-bold text-emerald-950 block">
+                                    841 - Riduzione in adempimento regime TFR / Riduz. INADEL regime TFR
+                                </span>
+                                <span class="text-[11px] text-emerald-800 font-sans">
+                                    Dicitura alternativa riscontrabile nei cedolini degli enti locali (scuole/nidi comunali).
+                                </span>
+                            </div>
+                            <span class="font-bold text-emerald-900 shrink-0">Voce Equivalente</span>
+                        </div>
+
+                        <!-- Riga Esclusa 1 -->
+                        <div id="row-excl-1" class="px-4 py-3.5 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 bg-white opacity-60 transition-all">
+                            <div>
+                                <span class="font-semibold text-slate-800 block">
+                                    912 - Ritenute previdenziali su arretrati / Conguaglio fiscale
+                                </span>
+                                <span class="text-[11px] text-slate-500 font-sans">
+                                    Trattenute ordinarie su competenze arretrate: non rientrano nel rimborso TFR 2,5%.
+                                </span>
+                            </div>
+                            <span class="font-semibold text-slate-500 shrink-0">Esclusa</span>
+                        </div>
+
+                        <!-- Riga Esclusa 2 -->
+                        <div id="row-excl-2" class="px-4 py-3.5 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 bg-white opacity-60 transition-all">
+                            <div>
+                                <span class="font-semibold text-slate-800 block">
+                                    950 - Rate riscatto laurea / Ricongiunzione periodi assicurativi
+                                </span>
+                                <span class="text-[11px] text-slate-500 font-sans">
+                                    Trattenute volontarie o contributive del lavoratore: non oggetto di restituzione.
+                                </span>
+                            </div>
+                            <span class="font-semibold text-slate-500 shrink-0">Esclusa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TOOL 4: Calcolatore finestra di prescrizione quinquennale -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+                <div class="mb-6 pb-4 border-b border-slate-100">
+                    <span class="text-xs font-bold text-gold-600 uppercase tracking-wider">Strumento 4 di 4</span>
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-navy-900">
+                        Calcolatore della finestra di prescrizione quinquennale (Art. 2948, n. 4, c.c.)
+                    </h3>
+                    <p class="text-sm text-slate-600 mt-1">
+                        Nel pubblico impiego i crediti retributivi si prescrivono in <strong>5 anni con decorrenza mese per mese</strong>. Verifica quale periodo è oggi tutelabile.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div class="space-y-4">
+                        <div>
+                            <label for="interruption-date" class="block text-sm font-semibold text-navy-900 mb-1.5">
+                                Data di invio / ricezione della diffida (PEC o Raccomandata A/R):
+                            </label>
+                            <input type="date" id="interruption-date"
+                                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-navy-900 font-medium text-sm focus:outline-none focus:border-navy-900">
+                            <p class="text-xs text-slate-500 mt-1.5">
+                                Impostata automaticamente sulla data odierna. Puoi modificarla se hai già inviato una diffida formale in precedenza.
+                            </p>
+                        </div>
+
+                        <div class="bg-gold-50 border border-gold-400/50 rounded-xl p-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                            <strong class="text-navy-900 block mb-1">Come funziona l’interruzione (Art. 2943 c.c.):</strong>
+                            Ogni mese che trascorre senza un atto interruttivo comporta la perdita definitiva della mensilità più vecchia. L’invio di una formale diffida e messa in mora tramite PEC o raccomandata A/R, conservando la ricevuta di avvenuta consegna, blocca il termine e cristallizza i 5 anni precedenti.
+                        </div>
+                    </div>
+
+                    <div class="bg-navy-50 border border-navy-900/15 rounded-xl p-6 text-center space-y-3">
+                        <span class="inline-block px-3 py-1 rounded-full bg-navy-900 text-white text-xs font-semibold">
+                            Finestra Temporale Tutelabile
+                        </span>
+                        <div>
+                            <span class="block text-xs text-slate-500 uppercase tracking-wide">Dal (limite quinquennale a ritroso)</span>
+                            <span id="prescription-start-date" class="block font-serif text-2xl sm:text-3xl font-bold text-navy-900 mt-0.5">
+                                25 novembre 2021
+                            </span>
+                        </div>
+                        <div class="text-slate-400 text-xs font-bold">FINO AL</div>
+                        <div>
+                            <span class="block text-xs text-slate-500 uppercase tracking-wide">Data di riferimento / Ricezione PEC</span>
+                            <span id="prescription-end-date" class="block font-serif text-xl sm:text-2xl font-bold text-gold-600 mt-0.5">
+                                25 novembre 2026
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-600 pt-2 border-t border-slate-200">
+                            Tutti i cedolini con contratti a termine pagati all’interno di questo arco temporale rientrano nel periodo non prescritto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione 4: Riepilogo Operativo Passo-Passo -->
+        <section class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-sm">
+            <div class="flex items-center gap-2 text-gold-600 text-xs font-bold uppercase tracking-widest mb-2">
+                <span>04. Sintesi operativa</span>
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy-900 mb-6">
+                I quattro passi per tutelare i propri diritti
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div class="p-5 rounded-xl bg-slate-50 border border-slate-200/80">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-navy-900 text-gold-400 font-bold text-xs mb-3">1</span>
+                    <h3 class="font-bold text-navy-900 text-base mb-1.5">Individuare i periodi di precariato</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Raccogliere tutti i contratti a tempo determinato (supplenze annuali, fino al termine delle attività didattiche o brevi) presso scuole statali o enti locali, anche se successivamente immessi in ruolo.
+                    </p>
+                </div>
+
+                <div class="p-5 rounded-xl bg-slate-50 border border-slate-200/80">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-navy-900 text-gold-400 font-bold text-xs mb-3">2</span>
+                    <h3 class="font-bold text-navy-900 text-base mb-1.5">Verificare le voci del cedolino</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Controllare le buste paga degli ultimi cinque anni verificando l’addebito mensile della voce <em>«TFR art. 1 c. 3 DPCM 20/12/1999 – 2,500 su 80»</em> o diciture equivalenti.
+                    </p>
+                </div>
+
+                <div class="p-5 rounded-xl bg-slate-50 border border-slate-200/80">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-navy-900 text-gold-400 font-bold text-xs mb-3">3</span>
+                    <h3 class="font-bold text-navy-900 text-base mb-1.5">Interrompere la prescrizione</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Inviare tempestivamente una diffida e messa in mora scritta tramite PEC o raccomandata A/R all’amministrazione competente, conservando la ricevuta di consegna.
+                    </p>
+                </div>
+
+                <div class="p-5 rounded-xl bg-slate-50 border border-slate-200/80">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-navy-900 text-gold-400 font-bold text-xs mb-3">4</span>
+                    <h3 class="font-bold text-navy-900 text-base mb-1.5">Valutazione tecnica preventiva</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Sottoporre contratti e cedolini a un esame legale per quantificare con esattezza il credito, gli interessi e l’opportunità di un ricorso al Giudice del Lavoro.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione 5: FAQ Espandibili -->
+        <section id="faq" class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-sm scroll-mt-24">
+            <div class="flex items-center gap-2 text-gold-600 text-xs font-bold uppercase tracking-widest mb-2">
+                <span>05. Chiarimenti frequenti</span>
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy-900 mb-6">
+                Domande frequenti (FAQ)
+            </h2>
+
+            <div class="divide-y divide-slate-200 border-t border-b border-slate-200">
+                <!-- FAQ 1 -->
+                <details class="group py-4" open>
+                    <summary class="flex justify-between items-center font-semibold text-navy-900 cursor-pointer text-base sm:text-lg pr-2">
+                        <span>Oggi sono docente o ATA di ruolo: posso chiedere comunque il rimborso?</span>
+                        <svg class="chevron-icon w-5 h-5 text-gold-600 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+                        Sì, ma limitatamente agli anni in cui hai lavorato con contratti a tempo determinato e per le mensilità non ancora prescritte (ultimi cinque anni). Per gli anni successivi all’immissione in ruolo in regime TFR, invece, la Corte costituzionale (sentenza n. 213/2018) e la Cassazione (ordinanze n. 19108 e n. 19438 del 2023) hanno ritenuto la riduzione legittima.
+                    </p>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="group py-4">
+                    <summary class="flex justify-between items-center font-semibold text-navy-900 cursor-pointer text-base sm:text-lg pr-2">
+                        <span>C’è già una pronuncia della Cassazione per i supplenti delle scuole statali?</span>
+                        <svg class="chevron-icon w-5 h-5 text-gold-600 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+                        Sì. Con l’ordinanza n. 19697/2023 la Corte di Cassazione ha confermato l’illegittimità della trattenuta del 2,50% applicata a un dipendente dell’amministrazione scolastica assunto con contratto a tempo determinato. Il principio si fonda sulla disciplina speciale dei rapporti a termine e si applica indipendentemente dalla data di prima assunzione, come ribadito anche dalla Corte d’Appello di Roma (sentenza n. 4033/2026) per il personale a termine degli enti locali.
+                    </p>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="group py-4">
+                    <summary class="flex justify-between items-center font-semibold text-navy-900 cursor-pointer text-base sm:text-lg pr-2">
+                        <span>Quanto si può recuperare indicativamente?</span>
+                        <svg class="chevron-icon w-5 h-5 text-gold-600 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+                        La trattenuta incide per circa il 2% della retribuzione lorda mensile (il 2,50% calcolato sull’80% dell’imponibile). Su uno stipendio lordo indicativo di 1.900 euro mensili, il prelievo è di circa 38 euro al mese (circa 380 euro per un anno scolastico di dieci mesi). L’ammontare esatto dipende tuttavia dai singoli cedolini e dai periodi effettivamente retribuiti.
+                    </p>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="group py-4">
+                    <summary class="flex justify-between items-center font-semibold text-navy-900 cursor-pointer text-base sm:text-lg pr-2">
+                        <span>Cosa succede se ho ancora un contratto a tempo determinato in corso?</span>
+                        <svg class="chevron-icon w-5 h-5 text-gold-600 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+                        Oltre a richiedere la restituzione delle somme già decurtate nei cinque anni precedenti, il lavoratore ancora titolare di contratti a termine può domandare l’accertamento del diritto alla cessazione immediata della trattenuta anche sulle mensilità future.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- Sezione 6: Call to Action Finale & Form di Richiesta Valutazione Preliminare -->
+        <section id="consulenza" class="bg-navy-900 text-white rounded-2xl p-6 sm:p-10 shadow-lg scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Testo CTA -->
+                <div class="lg:col-span-6 space-y-4">
+                    <span class="inline-block px-3 py-1 rounded-full bg-navy-800 border border-navy-700 text-gold-400 text-xs font-semibold uppercase tracking-wider">
+                        Assistenza Legale Specializzata
+                    </span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white leading-tight">
+                        Hai lavorato come supplente o con contratti a termine? Verifica subito i tuoi cedolini prima che scada la prescrizione.
+                    </h2>
+                    <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+                        Ogni mese che passa può comportare la perdita definitiva della mensilità più risalente del quinquennio. Se vuoi sapere con certezza se nei tuoi prospetti paga è stata applicata la trattenuta del 2,50% sul TFR, quantificare l’importo recuperabile e inviare correttamente l’atto di interruzione della prescrizione, contatta il nostro Studio per una valutazione preliminare della tua posizione.
+                    </p>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Analizzeremo nel dettaglio la tua documentazione per verificare la sussistenza del credito — valutando contestualmente eventuali ulteriori spettanze legate al precariato, come le ferie non godute o la reiterazione dei contratti — e illustrarti con chiarezza i passaggi più idonei per tutelare i tuoi diritti.
+                    </p>
+
+                    <!-- Checklist Documenti -->
+                    <div class="pt-3">
+                        <span class="block text-xs font-bold uppercase tracking-wider text-gold-400 mb-2.5">
+                            Checklist documenti utili per la verifica:
+                        </span>
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-200">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-4 h-4 text-gold-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Copia dei contratti a tempo determinato stipulati negli ultimi 5 anni;</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-4 h-4 text-gold-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Cedolini paga (NoiPA o ente locale) relativi ai periodi di supplenza;</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-4 h-4 text-gold-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Eventuali diffide o comunicazioni PEC già trasmesse all’amministrazione.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Modulo di Contatto / Richiesta Valutazione -->
+                <div class="lg:col-span-6 bg-white text-slate-800 rounded-xl p-6 shadow-md">
+                    <h3 class="font-serif text-xl font-bold text-navy-900 mb-1">
+                        Richiedi una valutazione preliminare
+                    </h3>
+                    <p class="text-xs text-slate-500 mb-5">
+                        Compila il modulo per sottoporre il tuo caso allo Studio. Ti risponderemo indicando le modalità di invio dei cedolini per il conteggio.
+                    </p>
+
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="user-qualifica" class="block text-xs font-semibold text-navy-900 mb-1">Qualifica / Profilo *</label>
+                                <select id="user-qualifica" required class="w-full px-3 py-2 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy-900 bg-white">
+                                    <option value="">Seleziona profilo...</option>
+                                    <option value="docente">Docente (Scuola Statale)</option>
+                                    <option value="ata">Personale ATA</option>
+                                    <option value="educatore">Educatore / Docente Enti Locali</option>
+                                    <option value="religione">Docente di Religione</option>
+                                    <option value="ruolo_ex_precario">Oggi di ruolo (ex precario)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="user-email" class="block text-xs font-semibold text-navy-900 mb-1">Indirizzo Email *</label>
+                                <input type="email" id="user-email" required placeholder="nome@esempio.it"
+                                    class="w-full px-3 py-2 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy-900">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="user-notes" class="block text-xs font-semibold text-navy-900 mb-1">
+                                Breve descrizione dei periodi a termine svolti *
+                            </label>
+                            <textarea id="user-notes" rows="3" required placeholder="Es. Ho svolto supplenze al 30 giugno negli ultimi 4 anni scolastici e ho riscontrato la voce TFR 2,500 su 80 nei cedolini..."
+                                class="w-full px-3 py-2 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy-900"></textarea>
+                        </div>
+
+                        <div class="flex items-start gap-2.5">
+                            <input type="checkbox" id="privacy-consent" required class="mt-1 rounded border-slate-300 text-navy-900 focus:ring-navy-900">
+                            <label for="privacy-consent" class="text-[11px] text-slate-500 leading-snug">
+                                Dichiaro di aver preso visione dell’informativa sul trattamento dei dati personali e comprendo che la presente richiesta ha finalità meramente orientative e non costituisce promessa di risultato.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full py-3 px-4 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-semibold text-sm transition-colors shadow-sm">
+                            Invia richiesta di verifica documentale
+                        </button>
+                    </form>
+
+                    <!-- Box Conferma Invio (nascosto di default) -->
+                    <div id="form-feedback" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs sm:text-sm leading-relaxed">
+                        <strong class="block font-bold mb-1">Richiesta registrata correttamente.</strong>
+                        Grazie per averci contattato. Un professionista dello Studio esaminerà le informazioni preliminari indicate e ti risponderà all’indirizzo email fornito per concordare l’analisi dei contratti e dei cedolini.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Istituzionale -->
+    <footer class="bg-navy-950 text-slate-400 border-t border-navy-900 py-10 mt-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-navy-900 pb-6">
+                <div>
+                    <span class="font-serif font-bold text-white text-lg block">Studio Legale Giuslavoristico</span>
+                    <span class="text-xs text-slate-400">Diritto del Lavoro, Pubblico Impiego e Diritto Scolastico</span>
+                </div>
+                <div class="text-xs text-slate-400">
+                    Aggiornamento giurisprudenziale: Novembre 2026
+                </div>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed">
+                <strong>Nota informativa e declinazione di responsabilità:</strong> i contenuti, i calcoli simulati e gli strumenti presenti in questa pagina hanno finalità esclusivamente divulgativa e informativa generale e non costituiscono parere legale vincolante né consulenza riferita a uno specifico caso concreto. L’esito di ogni eventuale azione stragiudiziale o giudiziale dipende dall’esame puntuale della documentazione contrattuale e retributiva del singolo lavoratore.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Logica JavaScript Interattiva -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Barra di avanzamento lettura
+            const progressBar = document.getElementById('reading-progress');
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                progressBar.style.width = `${Math.min(100, Math.max(0, scrollPercent))}%`;
+            });
+
+            // 2. Tool 1: Quiz rapido di idoneità
+            const quizState = { 1: null, 2: null, 3: null };
+            const quizButtons = document.querySelectorAll('.quiz-opt');
+            const quizResultBox = document.getElementById('quiz-result');
+            const resetQuizBtn = document.getElementById('reset-quiz-btn');
+
+            function updateQuizResult() {
+                const { 1: q1, 2: q2, 3: q3 } = quizState;
+                if (!q1 || !q2 || !q3) {
+                    quizResultBox.className = 'mt-6 p-5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-600';
+                    quizResultBox.innerHTML = 'Completa tutte e tre le domande per visualizzare l’esito orientativo.';
+                    return;
+                }
+
+                if (q1 === 'solo_ruolo') {
+                    quizResultBox.className = 'mt-6 p-5 rounded-xl bg-amber-50 border border-amber-300 text-sm text-amber-950 leading-relaxed';
+                    quizResultBox.innerHTML = '<strong>Esito orientativo: trattenuta generalmente legittima.</strong> Secondo la Corte costituzionale (sent. n. 213/2018) e la Cassazione (ord. n. 19108 e n. 19438/2023), per il personale assunto esclusivamente a tempo indeterminato in regime TFR la riduzione del 2,50% è legittima. Il rimborso spetta solo per eventuali periodi pregressi svolti con contratti a termine.';
+                } else if (q2 === 'altro') {
+                    quizResultBox.className = 'mt-6 p-5 rounded-xl bg-amber-50 border border-amber-300 text-sm text-amber-950 leading-relaxed';
+                    quizResultBox.innerHTML = '<strong>Esito orientativo: ambito normativo diverso.</strong> La giurisprudenza analizzata riguarda il personale a termine del pubblico impiego (scuole statali ed enti locali) soggetto al DPCM 20 dicembre 1999. Occorre verificare il contratto collettivo applicato al tuo settore.';
+                } else if (q3 === 'oltre_5') {
+                    quizResultBox.className = 'mt-6 p-5 rounded-xl bg-rose-50 border border-rose-300 text-sm text-rose-950 leading-relaxed';
+                    quizResultBox.innerHTML = '<strong>Esito orientativo: probabile intervenuta prescrizione.</strong> I crediti retributivi nel pubblico impiego si prescrivono in 5 anni (art. 2948, n. 4, c.c.). In assenza di atti interruttivi scritti (PEC o raccomandata A/R) inviati entro il quinquennio, le mensilità più risalenti risultano generalmente prescritte.';
+                } else {
+                    quizResultBox.className = 'mt-6 p-5 rounded-xl bg-emerald-50 border border-emerald-300 text-sm text-emerald-950 leading-relaxed';
+                    quizResultBox.innerHTML = '<strong>Esito orientativo: sussistono i presupposti generali per una verifica.</strong> Sulla base delle risposte fornite, rientri nella casistica tutelata dalla Corte di Cassazione (ord. n. 11663/2023 e n. 19697/2023) e dalla Corte d’Appello di Roma (sent. n. 4033/2026). Ti consigliamo di verificare nei cedolini la presenza della voce TFR e interrompere tempestivamente la prescrizione, ferma restando la necessaria analisi documentale del singolo caso.';
+                }
+            }
+
+            quizButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const q = btn.getAttribute('data-q');
+                    const val = btn.getAttribute('data-val');
+                    quizState[q] = val;
+
+                    // Aggiorna stile pulsanti della stessa domanda
+                    document.querySelectorAll(`.quiz-opt[data-q="${q}"]`).forEach(sibling => {
+                        sibling.classList.remove('bg-navy-900', 'text-white', 'border-navy-900');
+                        sibling.classList.add('text-slate-700', 'border-slate-200');
+                    });
+                    btn.classList.remove('text-slate-700', 'border-slate-200');
+                    btn.classList.add('bg-navy-900', 'text-white', 'border-navy-900');
+
+                    updateQuizResult();
+                });
+            });
+
+            resetQuizBtn.addEventListener('click', () => {
+                quizState[1] = quizState[2] = quizState[3] = null;
+                quizButtons.forEach(btn => {
+                    btn.classList.remove('bg-navy-900', 'text-white', 'border-navy-900');
+                    btn.classList.add('text-slate-700', 'border-slate-200');
+                });
+                updateQuizResult();
+            });
+
+            // 3. Tool 2: Simulatore indicativo del rimborso (2% lordo)
+            const salaryRange = document.getElementById('gross-salary');
+            const salaryInput = document.getElementById('gross-salary-input');
+            const monthsRange = document.getElementById('service-months');
+            const monthsInput = document.getElementById('service-months-input');
+            const monthlyDeductionEl = document.getElementById('monthly-deduction');
+            const totalRecoveryEl = document.getElementById('total-recovery');
+            const recoveryNoteEl = document.getElementById('recovery-note');
+
+            const euroFormatter = new Intl.NumberFormat('it-IT', {
+                style: 'currency',
+                currency: 'EUR',
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+
+            function calculateRecovery() {
+                let salary = parseFloat(salaryInput.value) || 0;
+                let months = parseInt(monthsInput.value, 10) || 1;
+
+                if (salary < 0) salary = 0;
+                if (months < 1) months = 1;
+                if (months > 60) months = 60;
+
+                // 2,50% sull'80% = 2,00% del lordo
+                const monthlyDeduction = salary * 0.02;
+                const totalRecovery = monthlyDeduction * months;
+
+                monthlyDeductionEl.textContent = euroFormatter.format(monthlyDeduction);
+                totalRecoveryEl.textContent = euroFormatter.format(totalRecovery);
+                recoveryNoteEl.textContent = `Calcolata su ${months} ${months === 1 ? 'mese' : 'mesi'} di servizio a termine`;
+            }
+
+            salaryRange.addEventListener('input', () => {
+                salaryInput.value = salaryRange.value;
+                calculateRecovery();
+            });
+            salaryInput.addEventListener('input', () => {
+                salaryRange.value = Math.min(4500, Math.max(800, salaryInput.value || 800));
+                calculateRecovery();
+            });
+            monthsRange.addEventListener('input', () => {
+                monthsInput.value = monthsRange.value;
+                calculateRecovery();
+            });
+            monthsInput.addEventListener('input', () => {
+                monthsRange.value = Math.min(60, Math.max(1, monthsInput.value || 1));
+                calculateRecovery();
+            });
+            calculateRecovery();
+
+            // 4. Tool 3: Tab Guida Visiva Cedolino
+            const payslipTabs = document.querySelectorAll('.payslip-tab');
+            const relevantRows = [document.getElementById('row-tfr-1'), document.getElementById('row-tfr-2')];
+            const excludedRows = [document.getElementById('row-excl-1'), document.getElementById('row-excl-2')];
+
+            payslipTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.getAttribute('data-tab');
+
+                    payslipTabs.forEach(t => {
+                        t.classList.remove('bg-navy-900', 'text-white');
+                        t.classList.add('bg-slate-100', 'text-slate-700');
+                    });
+                    tab.classList.remove('bg-slate-100', 'text-slate-700');
+                    tab.classList.add('bg-navy-900', 'text-white');
+
+                    if (target === 'rilevanti') {
+                        relevantRows.forEach(r => {
+                            r.classList.remove('opacity-40', 'bg-white');
+                            r.classList.add('bg-emerald-50/90', 'border-l-4', 'border-emerald-600');
+                        });
+                        excludedRows.forEach(r => {
+                            r.classList.remove('bg-amber-50', 'border-l-4', 'border-amber-500');
+                            r.classList.add('opacity-60', 'bg-white');
+                        });
+                    } else {
+                        relevantRows.forEach(r => {
+                            r.classList.remove('bg-emerald-50/90', 'border-l-4', 'border-emerald-600');
+                            r.classList.add('opacity-40', 'bg-white');
+                        });
+                        excludedRows.forEach(r => {
+                            r.classList.remove('opacity-60', 'bg-white');
+                            r.classList.add('bg-amber-50', 'border-l-4', 'border-amber-500');
+                        });
+                    }
+                });
+            });
+
+            // 5. Tool 4: Calcolatore Finestra Prescrizione Quinquennale
+            const interruptionDateInput = document.getElementById('interruption-date');
+            const startDateDisplay = document.getElementById('prescription-start-date');
+            const endDateDisplay = document.getElementById('prescription-end-date');
+
+            // Imposta data odierna di default (2026-11-25 o data corrente del browser)
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, '0');
+            const dd = String(today.getDate()).padStart(2, '0');
+            interruptionDateInput.value = `${yyyy}-${mm}-${dd}`;
+
+            const dateFormatterIT = new Intl.DateTimeFormat('it-IT', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            });
+
+            function updatePrescriptionWindow() {
+                const selectedVal = interruptionDateInput.value;
+                if (!selectedVal) return;
+
+                const parts = selectedVal.split('-');
+                const endDate = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+                const startDate = new Date(endDate);
+                startDate.setFullYear(startDate.getFullYear() - 5);
+
+                startDateDisplay.textContent = dateFormatterIT.format(startDate);
+                endDateDisplay.textContent = dateFormatterIT.format(endDate);
+            }
+
+            interruptionDateInput.addEventListener('change', updatePrescriptionWindow);
+            updatePrescriptionWindow();
+
+            // 6. Gestione Form Richiesta Valutazione Preliminare
+           // Gestione invio modulo tramite client email (mailto)
+    const contactForm = document.getElementById('contactForm') || document.querySelector('form');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Legge i valori inseriti nei campi del modulo
+            const campiTesto = this.querySelectorAll('input[type="text"], input:not([type])');
+            const nome = campiTesto[0] ? campiTesto[0].value.trim() : '';
+            const emailInput = this.querySelector('input[type="email"]');
+            const email = emailInput ? emailInput.value.trim() : '';
+            const telInput = this.querySelector('input[type="tel"]');
+            const telefono = telInput ? telInput.value.trim() : '';
+            const selectInput = this.querySelector('select');
+            const profilo = selectInput ? selectInput.options[selectInput.selectedIndex].text : '';
+            const textareaInput = this.querySelector('textarea');
+            const messaggio = textareaInput ? textareaInput.value.trim() : '';
+
+            // INSERISCI QUI IL TUO INDIRIZZO EMAIL REALE
+            const destinatario = "info@studiolegalegolinelli.it";
+
+            const oggetto = encodeURIComponent("Richiesta verifica trattenuta TFR 2,5% - " + (nome || "Nuovo contatto"));
+            
+            let corpoTesto = "Buongiorno,\nrichiedo una valutazione preliminare sulla trattenuta del 2,50% TFR.\n\n";
+            if (nome) corpoTesto += "Nominativo: " + nome + "\n";
+            if (email) corpoTesto += "Email: " + email + "\n";
+            if (telefono) corpoTesto += "Telefono: " + telefono + "\n";
+            if (profilo) corpoTesto += "Profilo / Qualifica: " + profilo + "\n";
+            if (messaggio) corpoTesto += "\nNote sui contratti e sui periodi di servizio:\n" + messaggio + "\n";
+
+            const corpo = encodeURIComponent(corpoTesto);
+
+            // Apre il client di posta dell'utente
+            window.location.href = `mailto:${destinatario}?subject=${oggetto}&body=${corpo}`;
+        });
+    }
+    </script>
+</body>
+</html>

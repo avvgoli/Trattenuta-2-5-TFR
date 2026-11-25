@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #081829;
+  --color-navy-900: #0f2942;
+  --color-navy-800: #163a5c;
+  --color-navy-700: #1f4e78;
+  --color-navy-50: #f0f4f8;
+
+  --color-gold-600: #8c6623;
+  --color-gold-500: #b48a3e;
+  --color-gold-400: #cca356;
+  --color-gold-100: #f8f2e4;
+  --color-gold-50: #fcf9f2;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #f9f8f5;
+    color: #292524;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+}
+
+/* Custom Range Slider */
+input[type="range"].legal-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #e7e5e4;
+  border-radius: 999px;
+  outline: none;
+}
+
+input[type="range"].legal-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #0f2942;
+  border: 3px solid #b48a3e;
+  cursor: pointer;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease;
+  box-shadow: 0 2px 6px rgba(15, 41, 66, 0.25);
+}
+
+input[type="range"].legal-range::-webkit-slider-thumb:hover {
+  transform: scale(1.08);
+  background: #163a5c;
+}
+
+input[type="range"].legal-range::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #0f2942;
+  border: 3px solid #b48a3e;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(15, 41, 66, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
